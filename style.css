@@ -1,0 +1,39 @@
+/* Estils Generals */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Galeria Flexbox */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.galeria img {
+    width: calc(25% - 10px); /* Tenint en compte l'espai entre imatges */
+    transition: 0.3s ease;
+}
+
+/* Efecte al passar el ratolí */
+.galeria img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Adaptació per a mòbils */
+@media (max-width: 600px) {
+    .galeria img {
+        width: calc(50% - 10px);
+    }
+}
+
+/* Filtrat de categories (extra) */
+.natura:not([data-filter="natura"]),
+.tecnologia:not([data-filter="tecnologia"]),
+.art:not([data-filter="art"]) {
+    display: none;
+}
