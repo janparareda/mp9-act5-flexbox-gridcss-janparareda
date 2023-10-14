@@ -31,9 +31,5 @@ body {
     }
 }
 
-/* Filtrat de categories (extra) */
-.natura:not([data-filter="natura"]),
-.tecnologia:not([data-filter="tecnologia"]),
-.art:not([data-filter="art"]) {
-    display: none;
+
 }
